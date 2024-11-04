@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Person>
+    <Id>1</Id>
+    <FirstName>Musa</FirstName>
+    <LastName>Muradli</LastName>
+    <Age>25</Age>
+  </Person>
+  <Person>
+    <Id>2</Id>
+    <FirstName>Asiman</FirstName>
+    <LastName>Qeddar</LastName>
+    <Age>21</Age>
+  </Person>
+  <Person>
+    <Id>0</Id>
+    <FirstName>sas</FirstName>
+    <LastName>sas</LastName>
+    <Age>12</Age>
+  </Person>
+  <Person>
+    <Id>4</Id>
+    <FirstName>Aslan</FirstName>
+    <LastName>Aslanov</LastName>
+    <Age>20</Age>
+  </Person>
+</ArrayOfPerson>

@@ -1,0 +1,6 @@
+@DataXML_HostAddress = http://localhost:5023
+
+GET {{DataXML_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
