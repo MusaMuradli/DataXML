@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
 
-public class PersonService
+namespace DataXML;
+
+public class PersonXmlService : ICrudService
 {
     private readonly string xmlFilePath;
 
-    public PersonService(string filePath)
+    public PersonXmlService()
     {
-        xmlFilePath = filePath;
-        var directory = Path.GetDirectoryName(filePath);
+        xmlFilePath = Constant.FolderPath;
+        var directory = Path.GetDirectoryName(Constant.FolderPath);
         if (!Directory.Exists(directory))
         {
             Directory.CreateDirectory(directory);
         }
     }
 
-    public void SaveToXml(List<Person> people)
+    public void Save(List<Person> people)
     {
         var serializer = new XmlSerializer(typeof(List<Person>));
         using (var writer = new StreamWriter(xmlFilePath))
@@ -25,7 +27,7 @@ public class PersonService
             serializer.Serialize(writer, people);
         }
     }
-    public List<Person> LoadFromXml()
+    public List<Person> Load()
     {
         if (!File.Exists(xmlFilePath))
         {
